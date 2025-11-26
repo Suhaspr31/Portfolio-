@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaPhone, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -42,24 +42,15 @@ const Contact = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)", transition: { duration: 0.2 } }}
+            whileTap={{ scale: 0.95 }}
             className="flex items-center gap-3 bg-blue-500 hover:bg-blue-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
           >
             <FaEnvelope />
             Email Me
           </motion.a>
 
-          <motion.a
-            href="tel:+917022949724"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)" }}
-            className="flex items-center gap-3 bg-green-500 hover:bg-green-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
-          >
-            <FaPhone />
-            Call Me
-          </motion.a>
+         
         </div>
 
         <motion.div
@@ -68,38 +59,36 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex justify-center gap-8"
         >
-          <a
+          <motion.a
             href="https://www.linkedin.com/in/suhas-p-r-6906b0310/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-4xl text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:scale-110 transform"
+            className="text-4xl text-blue-400 hover:text-blue-300 transition-colors duration-300"
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FaLinkedin />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://github.com/Suhaspr31"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-4xl text-gray-300 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+            className="text-4xl text-gray-300 hover:text-white transition-colors duration-300"
+            whileHover={{ scale: 1.2, rotate: -5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FaGithub />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://leetcode.com/u/suhaspr/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-4xl text-orange-400 hover:text-orange-300 transition-colors duration-300 hover:scale-110 transform"
+            className="text-4xl text-orange-400 hover:text-orange-300 transition-colors duration-300"
+            whileHover={{ scale: 1.2, y: -5 }}
+            whileTap={{ scale: 0.9 }}
           >
             <span className="font-bold">LC</span>
-          </a>
-          <a
-            href="https://www.geeksforgeeks.org/user/suhasp1rsm/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-4xl text-green-400 hover:text-green-300 transition-colors duration-300 hover:scale-110 transform"
-          >
-            <span className="font-bold">GFG</span>
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.div
