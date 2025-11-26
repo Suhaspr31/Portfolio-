@@ -52,10 +52,17 @@ const Skills = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="bg-gray-800 p-8 rounded-xl shadow-lg"
+            whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(59, 130, 246, 0.3)" }}
+            className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
           >
             <h3 className="text-2xl font-semibold text-blue-400 mb-6 flex items-center gap-3">
-              <span className="text-3xl">{category.icon}</span>
+              <motion.span
+                className="text-3xl"
+                whileHover={{ rotate: 10, scale: 1.2 }}
+                transition={{ duration: 0.2 }}
+              >
+                {category.icon}
+              </motion.span>
               {category.title}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -65,7 +72,7 @@ const Skills = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: skillIndex * 0.05 }}
-                  whileHover={{ scale: 1.05, backgroundColor: "#1f2937" }}
+                  whileHover={{ scale: 1.1, backgroundColor: "#4b5563", boxShadow: "0 0 25px rgba(59, 130, 246, 0.6)", y: -5 }}
                   className="bg-gray-700 p-3 text-center rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
                   {typeof skill === 'string' ? (

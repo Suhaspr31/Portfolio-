@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -43,8 +43,6 @@ const Hero = () => {
           className="mt-8 flex flex-col md:flex-row items-center justify-center gap-4 text-gray-400"
         >
           <div className="flex items-center gap-2">
-            <FaPhone className="text-blue-400" />
-            <span>+91-7022949724</span>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-blue-400" />
@@ -58,25 +56,43 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-8 flex justify-center gap-6"
         >
-          <a href="https://www.linkedin.com/in/suhas-p-r-6906b0310/" target="_blank" rel="noopener noreferrer" className="text-3xl text-blue-400 hover:text-blue-300 transition-colors">
+          <motion.a
+            href="https://www.linkedin.com/in/suhas-p-r-6906b0310/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-blue-400 hover:text-blue-300 transition-colors"
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <FaLinkedin />
-          </a>
-          <a href="https://github.com/Suhaspr31" target="_blank" rel="noopener noreferrer" className="text-3xl text-gray-300 hover:text-white transition-colors">
+          </motion.a>
+          <motion.a
+            href="https://github.com/Suhaspr31"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-gray-300 hover:text-white transition-colors"
+            whileHover={{ scale: 1.2, rotate: -5 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <FaGithub />
-          </a>
-          <a href="https://leetcode.com/u/suhaspr/" target="_blank" rel="noopener noreferrer" className="text-3xl text-orange-400 hover:text-orange-300 transition-colors">
+          </motion.a>
+          <motion.a
+            href="https://leetcode.com/u/suhaspr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-orange-400 hover:text-orange-300 transition-colors"
+            whileHover={{ scale: 1.2, y: -5 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <span className="font-bold">LC</span>
-          </a>
-          <a href="https://www.geeksforgeeks.org/user/suhasp1rsm/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition-colors">
-            <span className="font-bold text-3xl">GFG</span>
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
+          whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)", transition: { duration: 0.2 } }}
           whileTap={{ scale: 0.95 }}
           className="mt-10 bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
         >

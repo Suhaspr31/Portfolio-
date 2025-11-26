@@ -18,9 +18,19 @@ const About = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gray-900 p-8 rounded-lg shadow-lg"
+          whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(59, 130, 246, 0.3)" }}
+          className="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
         >
-          <h3 className="text-2xl font-semibold text-blue-400 mb-6">🎓 Education</h3>
+          <h3 className="text-2xl font-semibold text-blue-400 mb-6 flex items-center gap-3">
+            <motion.span
+              className="text-3xl"
+              whileHover={{ rotate: 10, scale: 1.2 }}
+              transition={{ duration: 0.2 }}
+            >
+              🎓
+            </motion.span>
+            Education
+          </h3>
           <div className="space-y-4">
             <div>
               <h4 className="text-xl font-medium text-white">B.E - Computer Science and Engineering</h4>
@@ -35,13 +45,23 @@ const About = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gray-900 p-8 rounded-lg shadow-lg"
+          whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(59, 130, 246, 0.3)" }}
+          className="bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
         >
-          <h3 className="text-2xl font-semibold text-blue-400 mb-6">🏆 Extracurricular</h3>
+          <h3 className="text-2xl font-semibold text-blue-400 mb-6 flex items-center gap-3">
+            <motion.span
+              className="text-3xl"
+              whileHover={{ rotate: -10, scale: 1.2 }}
+              transition={{ duration: 0.2 }}
+            >
+              🏆
+            </motion.span>
+            Extracurricular
+          </h3>
           <div className="space-y-4">
             <div>
               <h4 className="text-xl font-medium text-white">Data Structures & Algorithms</h4>
-              <p className="text-gray-400">Solved 100+ problems across LeetCode and GeeksforGeeks</p>
+              <p className="text-gray-400">Solved 100+ problems in LeetCode</p>
               <p className="text-gray-400">Strong in graphs, trees, DP, and system design patterns</p>
             </div>
             <div>

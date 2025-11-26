@@ -43,6 +43,7 @@ const Projects = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
+            whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(59, 130, 246, 0.3)" }}
             className="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
           >
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
@@ -52,9 +53,14 @@ const Projects = () => {
               </div>
               <div className="flex flex-wrap gap-2 mt-4 lg:mt-0">
                 {proj.tech.map((tech) => (
-                  <span key={tech} className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                  <motion.span
+                    key={tech}
+                    className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium cursor-pointer"
+                    whileHover={{ scale: 1.1, backgroundColor: "rgba(59, 130, 246, 0.4)" }}
+                    transition={{ duration: 0.2 }}
+                  >
                     {tech}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </div>
