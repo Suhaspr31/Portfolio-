@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center px-10 py-5 bg-gray-950 fixed w-full z-50 shadow-lg">
-      <h1 className="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer">Suhas.dev</h1>
+      <h1 className="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-pointer">Suhas</h1>
 
       <ul className="hidden md:flex gap-8 text-lg">
         {links.map((link) => (
