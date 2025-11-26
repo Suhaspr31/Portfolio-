@@ -6,21 +6,21 @@ const projects = [
     date: "Jan'25",
     tech: ["Python", "React", "MongoDB", "YOLOv8", "Google Gemini API"],
     desc: "Developed a comprehensive AI-powered agricultural platform integrating crop disease diagnosis, real-time IoT monitoring, and market intelligence for farmers. Implemented Google Gemini API and YOLOv8 computer vision models to detect 20+ crop diseases with 92%+ accuracy, providing instant treatment recommendations. Built a full-stack microservices architecture with React PWA frontend, Node.js/Express backend, Python AI services, and MongoDB for scalable data management. Integrated weather APIs, multilingual support (4 languages), SMS alerts, and ML-based price forecasting to deliver personalized farming insights and marketplace connectivity.",
-    link: "https://github.com/Suhaspr31"
+    link: "https://github.com/Suhaspr31/AgroUnify-Smart-Farming-and-Agricultural-Platform-"
   },
   {
     name: "AI-Based Facial Recognition System",
     date: "Dec'24",
     tech: ["Python", "OpenCV", "TensorFlow", "Flask", "SQLite"],
     desc: "Built a real-time face recognition attendance system using Python and OpenCV with live webcam-based detection and recognition. Integrated a Flask web interface to manage users, register new faces, and view recorded attendance logs. Implemented SQL database storage for user records and automated timestamped attendance tracking. Designed for secure, fast and efficient verification, enabling seamless use cases such as access logging, classroom/office attendance, and visitor authentication.",
-    link: "https://github.com/Suhaspr31"
+    link: "https://github.com/Suhaspr31/Face-Recognition-Attendance-System"
   },
   {
     name: "Sentiment Watchdog – AI-Powered Review Analyzer",
     date: "Jul'24",
     tech: ["Python", "NLP", "scikit-learn", "Flask", "TF-IDF", "Logistic Regression"],
     desc: "Built an automated sentiment classification system using machine learning and NLP to analyze customer reviews and detect polarity in real time. Trained and evaluated models using TF-IDF, Logistic Regression, and Na¨ıve Bayes to improve accuracy and interpretability. Developed a Flask-based web interface for users to input text and receive instant sentiment feedback with confidence scores.",
-    link: "https://github.com/Suhaspr31"
+    link: "https://github.com/Suhaspr31/Sentiment-Watchdog-Project"
   },
 ];
 
